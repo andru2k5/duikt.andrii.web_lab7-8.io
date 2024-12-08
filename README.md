@@ -1,1 +1,0 @@
-# duikt.andrii.web_lab7-8.io
