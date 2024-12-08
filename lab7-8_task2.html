@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тортики</title>
+    <style>
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.category_item {
+  background-color: #939693;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.article_container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.article_name_container {
+  gap: 5px;
+}
+.article_item {
+  display: inline-grid;
+  background-color: #f6f7f8;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.article_item:hover {
+  box-shadow: 8px 8px 32px 0px rgb(158, 161, 159);
+}
+.article_additional {
+  display: flex;
+  border-top: 1px solid #c3c7c3;
+  align-items: center;
+}
+.article_name {
+  font-weight: 600;
+}
+.article_image {
+  width: 70%;
+  border: 1px solid #dfe2e0;
+}
+.article_main {
+  display: flex;
+  padding: 6px;
+  gap: 10px;
+}
+.article_additional_text {
+  padding: 6px;
+}
+.sidebar {
+  padding: 12px;
+  background-color: #d5dad3;
+}
+.sidebar_category {
+  display: grid;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+.sidebar_category_item {
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: rgb(199, 201, 199);
+}
+.sidebar_title {
+  text-align: center;
+}
+.sidebar_slider {
+  width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    display: block;
+    gap: 0;
+  }
+  .article_image {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .article_additional {
+    display: none;
+  }
+  .article_main {
+    display: block;
+  }
+  .article_name_container {
+    display: flex;
+  }
+}
+@media screen and (max-width: 730px) {
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .category {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .article_container {
+    grid-template-columns: 1fr;
+  }
+  .article_name_container {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">Тортики</div>
+      <div class="category">
+        <div class="category_item">Торт "Наполеон"</div>
+        <div class="category_item">Медовий торт</div>
+        <div class="category_item">Чізкейк з ягодами</div>
+        <div class="category_item">Шоколадний торт</div>
+        <div class="category_item">Торт із карамеллю</div>
+        <div class="category_item">Скинути фільтр</div>
+      </div>
+      <div class="container">
+        <div class="article_container">
+            <div class="article_item" data-calories="350">
+                <div class="article_main">
+                    <img src="./images/cake1.jpg" alt="Торт Наполеон" class="article_image">
+                    <div class="article_name_container">
+                    <div class="article_category">Торт:</div>
+                    <div class="article_name">Наполеон</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 350 кКал</div></div>
+            </div>
+            <div class="article_item" data-calories="250">
+                <div class="article_main">
+                    <img src="./images/cake2.jpg" alt="Медовий торт" class="article_image">
+                    <div class="article_name_container">
+                    <div class="article_category">Торт:</div>
+                    <div class="article_name">Медовий</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 250 кКал</div></div>
+    
+            </div>
+            <div class="article_item" data-calories="500">
+                <div class="article_main">
+                    <img src="./images/cake3.jpg" alt="Чізкейк з ягодами" class="article_image">
+                    <div class="article_name_container">
+                    <div class="article_category">Чізкейк</div>
+                    <div class="article_name">з ягодами</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 500 кКал</div></div>
+    
+            </div>
+            <div class="article_item" data-calories="400">
+                <div class="article_main">
+                    <img src="./images/cake4.jpg" alt="Шоколадний торт" class="article_image">
+                    <div class="article_name_container">
+                    <div class="article_category">Торт:</div>
+                    <div class="article_name">Шоколадний</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 400 кКал</div></div>
+    
+            </div>
+            <div class="article_item" data-calories="300">
+                <div class="article_main">
+                    <img src="./images/cake5.jpg" alt="Торт із карамеллю" class="article_image">
+                    <div class="article_name_container">
+                    <div class="article_category">Торт</div>
+                    <div class="article_name">із карамеллю</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 300 кКал</div></div>
+    
+              </div>
+            <div class="article_item" data-calories="450">
+                <div class="article_main">
+                    <img src="./images/cake6.jpg" alt="Торт з горіхами" class="article_image">
+                    <div class="article_name_container">
+                        <div class="article_category">Торт</div>
+                        <div class="article_name">з горіхами</div>
+                    </div>
+                </div>
+                <div class="article_additional"><div class='article_additional_text'>Калорій у порції: 450 кКал</div></div>
+    
+            </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar_title">Калорій у порції</div>
+                <input type="range" id="caloriesFilter" min="0" max="500" value="500" class="sidebar_slider">
+                <div id="caloriesValue">500 кКал</div>
+                <div class="slider_range">Від 0 до 500</div>
+                <div class="sidebar_category">
+                    <div class="sidebar_category_item">Торт "Наполеон"</div>
+                    <div class="sidebar_category_item">Медовий торт</div>
+                    <div class="sidebar_category_item">Чізкейк з ягодами</div>
+                    <div class="sidebar_category_item">Шоколадний торт</div>
+                    <div class="sidebar_category_item">Торт із карамеллю</div>
+                    <div class="sidebar_category_item" id="resetFilter">Скинути фільтр</div>
+                </div>
+            </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('caloriesFilter');
+      const articles = document.querySelectorAll('.article_item');
+      const caloriesValue = document.getElementById('caloriesValue');
+      const resetButton = document.getElementById('resetFilter');
+  
+      slider.addEventListener('input', function() {
+      const maxCalories = parseInt(slider.value, 10);
+      caloriesValue.textContent = `${maxCalories} кКал`;
+
+      articles.forEach(article => {
+      const calories = parseInt(article.dataset.calories, 10);
+      if (calories <= maxCalories) {
+        article.style.display = 'grid';
+      } else {
+        article.style.display = 'none';
+      }
+    });
+  });
+  
+  resetButton.addEventListener('click', function() {
+    slider.value = 500;
+    caloriesValue.textContent = `500 кКал`;
+
+    articles.forEach(article => {
+      article.style.display = 'grid';
+    });
+  });
+});
+    </script>
+  </body>
+</html>
